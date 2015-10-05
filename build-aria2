@@ -1,1 +1,0 @@
-./configure --prefix=/opt/aria2 --without-libxml2 --without-libgcrypt --with-openssl --without-libnettle --without-gnutls --without-libgmp --with-sqlite3 ARIA2_STATIC=yes --enable-shared=no
