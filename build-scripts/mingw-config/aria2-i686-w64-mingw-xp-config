@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# In this configuration, the following dependent libraries are used:
+#
+# * zlib
+# * c-ares
+# * expat
+# * sqlite3
+# * openSSL
+
+HOST=i686-w64-mingw32
+PREFIX=/usr/i686-w64-mingw32
+
+./configure \
+    --host=$HOST \
+    --prefix=$PREFIX \
+    --without-included-gettext \
+    --disable-nls \
+    --with-libcares \
+    --without-gnutls \
+    --without-wintls \
+    --with-openssl \
+    --with-sqlite3 \
+    --without-libxml2 \
+    --with-libexpat \
+    --with-libz \
+    --without-libgmp \
+    --without-libssh2 \
+    --without-libgcrypt \
+    --without-libnettle \
+    --with-cppunit-prefix=$PREFIX \
+    ARIA2_STATIC=yes \
+    CPPFLAGS="-I$PREFIX/include" \
+    LDFLAGS="-L$PREFIX/lib" \
+    PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig"

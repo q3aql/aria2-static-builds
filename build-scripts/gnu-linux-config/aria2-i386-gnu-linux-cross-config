@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# In this configuration, the following dependent libraries are used:
+#
+# * zlib
+# * c-ares
+# * expat
+# * sqlite3
+# * openSSL
+# * libssh2
+
+#IMPORTANT: Require install gcc-multilib g++-multilib libc6-dev-i386
+#COMPILER AND PATH
+PREFIX=/opt/aria2-i386
+C_COMPILER="gcc"
+CXX_COMPILER="g++"
+
+## BUILD ##
+export CFLAGS="-m32" 
+export CXXFLAGS="-m32"
+export LDFLAGS="-m32"
+
+CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=/opt/aria2-i386/build_libs/lib/pkgconfig/ LD_LIBRARY_PATH=/opt/aria2-i386/build_libs/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --without-libxml2 --without-libgcrypt --with-openssl --without-libnettle --without-gnutls --with-libssh2 --without-libgmp --with-sqlite3 --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt' ARIA2_STATIC=yes --enable-shared=no
+  
+

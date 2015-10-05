@@ -1,0 +1,112 @@
+#!/bin/bash
+
+# In this configuration, the following dependent libraries are compiled:
+#
+# * zlib
+# * c-ares
+# * expat
+# * sqlite3
+# * openSSL
+# * libssh2
+
+## DEPENDENCES ##
+ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
+OPENSSL=http://www.openssl.org/source/openssl-1.0.2d.tar.gz
+#GMPLIB=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2
+EXPAT=http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz
+SQLITE3=https://www.sqlite.org/2015/sqlite-autoconf-3081101.tar.gz
+C_ARES=http://c-ares.haxx.se/download/c-ares-1.10.0.tar.gz
+#CPPUNIT=http://dev-www.libreoffice.org/src/cppunit-1.13.2.tar.gz
+SSH2=http://www.libssh2.org/download/libssh2-1.6.0.tar.gz
+
+## CONFIG ##
+BUILD_DIRECTORY=/tmp/
+HOST=i686-w64-mingw32
+PREFIX=/usr/i686-w64-mingw32
+
+## BUILD ##
+cd $BUILD_DIRECTORY
+#
+ # zlib build
+  wget -c $ZLIB
+  tar zxvf zlib-1.2.8.tar.gz
+  cd zlib-1.2.8/
+  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --static
+  make
+  make install
+# 
+ # expat build
+  cd ..
+  wget -c $EXPAT
+  tar zxvf expat-2.1.0.tar.gz
+  cd expat-2.1.0/
+  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  make
+  make install
+#
+ # cppunit build
+  #cd ..
+  #wget -c $CPPUNIT
+  #tar zxvf cppunit-1.13.2.tar.gz
+  #cd cppunit-1.13.2/
+  #CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  #make
+  #make install
+#
+ # c-ares build
+  cd ..
+  wget -c $C_ARES
+  tar zxvf c-ares-1.10.0.tar.gz
+  cd c-ares-1.10.0/
+  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  make
+  make install
+#
+ # GMPlib build
+  #cd ..
+  #wget -c $GMPLIB
+  #tar jxvf gmp-6.0.0a.tar.bz2
+  #cd gmp-6.0.0/
+  #CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  #make
+  #make install
+#
+ # Openssl build
+  cd ..
+  wget -c $OPENSSL
+  tar zxvf openssl-1.0.2d.tar.gz
+  cd openssl-1.0.2d/
+  ./Configure mingw --cross-compile-prefix=$HOST- --prefix=$PREFIX
+  make
+  make install
+#
+ # sqlite3
+  cd ..
+  wget -c $SQLITE3
+  tar zxvf sqlite-autoconf-3081101.tar.gz
+  cd sqlite-autoconf-3081101/
+  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  make
+  make install
+#
+ # libssh2
+  cd ..
+  wget -c $SSH2
+  tar zxvf libssh2-1.6.0.tar.gz
+  cd libssh2-1.6.0/
+  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  make
+  make install
+#
+ #cleaning
+  cd ..
+  rm -rf c-ares*
+  rm -rf sqlite-autoconf*
+  rm -rf zlib-*
+  rm -rf expat-*
+  rm -rf gmp-*
+  rm -rf libssh2-*
+  rm -rf cppunit-*
+#
+ echo "finished!"
+
