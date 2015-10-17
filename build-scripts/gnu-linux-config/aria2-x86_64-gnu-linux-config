@@ -15,6 +15,20 @@ C_COMPILER="gcc"
 CXX_COMPILER="g++"
 
 ## BUILD ##
-PKG_CONFIG_PATH=/opt/aria2/build_libs/lib/pkgconfig/ LD_LIBRARY_PATH=/opt/aria2/build_libs/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --without-libxml2 --without-libgcrypt --with-openssl --without-libnettle --without-gnutls --without-libgmp --with-libssh2 --with-sqlite3 --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt' ARIA2_STATIC=yes --enable-shared=no
-  
-
+PKG_CONFIG_PATH=/opt/aria2/build_libs/lib/pkgconfig/ \
+LD_LIBRARY_PATH=/opt/aria2/build_libs/lib/ \
+CC="$C_COMPILER" \
+CXX="$CXX_COMPILER" \
+./configure \
+    --prefix=$PREFIX \
+    --without-libxml2 \
+    --without-libgcrypt \
+    --with-openssl \
+    --without-libnettle \
+    --without-gnutls \
+    --without-libgmp \
+    --with-libssh2 \
+    --with-sqlite3 \
+    --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt' \
+    ARIA2_STATIC=yes \
+    --enable-shared=no
