@@ -20,7 +20,7 @@ CXX_COMPILER="g++"
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2d.tar.gz
 EXPAT=http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz
-SQLITE3=https://www.sqlite.org/2015/sqlite-autoconf-3081101.tar.gz
+SQLITE3=https://www.sqlite.org/2015/sqlite-autoconf-3090100.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.10.0.tar.gz
 SSH2=http://www.libssh2.org/download/libssh2-1.6.0.tar.gz
 GCRYPT=ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.6.3.tar.gz
@@ -72,8 +72,8 @@ export LDFLAGS="-m32"
  # sqlite3
   cd ..
   wget -c $SQLITE3
-  tar zxvf sqlite-autoconf-3081101.tar.gz
-  cd sqlite-autoconf-3081101/
+  tar zxvf sqlite-autoconf-3090100.tar.gz
+  cd sqlite-autoconf-3090100/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --disable-shared
   make
   make install
