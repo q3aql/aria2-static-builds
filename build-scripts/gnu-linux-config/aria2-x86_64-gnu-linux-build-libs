@@ -7,7 +7,6 @@
 # * expat
 # * sqlite3
 # * openSSL
-# * libgcrypt
 # * libssh2
 
 #COMPILER AND PATH
@@ -22,7 +21,6 @@ EXPAT=http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz
 SQLITE3=https://www.sqlite.org/2015/sqlite-autoconf-3090100.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.10.0.tar.gz
 SSH2=http://www.libssh2.org/download/libssh2-1.6.0.tar.gz
-GCRYPT=ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.6.3.tar.gz
 
 ## CONFIG ##
 BUILD_DIRECTORY=/tmp/
@@ -74,23 +72,38 @@ cd $BUILD_DIRECTORY
   make
   make install
 #
- # libgcrypt
-  cd ..
-  wget -c $GCRYPT
-  tar zxvf libgcrypt-1.6.3.tar.gz
-  cd libgcrypt-1.6.3/
-  PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --enable-static --disable-shared
-  make
-  make install
-#
  # libssh2
   cd ..
   wget -c $SSH2
   tar zxvf libssh2-1.6.0.tar.gz
   cd libssh2-1.6.0/
-  PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --with-libgcrypt -without-openssl --prefix=$PREFIX --enable-static --disable-shared
+  rm -rf $PREFIX/lib/pkgconfig/libssh2.pc
+  PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --without-libgcrypt --with-openssl --without-wincng --prefix=$PREFIX --enable-static --disable-shared
   make
   make install
+  if [ -f $PREFIX/lib/pkgconfig/libssh2.pc ] ; then
+     echo "$PREFIX/lib/pkgconfig/libssh2.pc"
+  else
+     echo "################################" > $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "# libssh2 installation details #" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "#################################" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "prefix=$PREFIX" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "exec_prefix=$PREFIX" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "libdir=$PREFIX/lib" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "includedir=$PREFIX/include" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Name: libssh2" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "URL: http://www.libssh2.org/" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Description: Library for SSH-based communication" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Version: 1.6.0" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Requires.private: zlib" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Libs: -L$PREFIX/lib -lssh2 -lssl -lcrypto -lz" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Libs.private:  -lssl -lcrypto -lz" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "Cflags: -I$PREFIX/include" >> $PREFIX/lib/pkgconfig/libssh2.pc
+     echo "$PREFIX/lib/pkgconfig/libssh2.pc created!"
+     cp -rf include/*.h $PREFIX/include
+  fi  
 #
  #cleaning
   cd ..
@@ -100,6 +113,5 @@ cd $BUILD_DIRECTORY
   rm -rf expat-*
   rm -rf openssl-*
   rm -rf libssh2-*
-  rm -rf libgcrypt-*
 #
  echo "finished!"
