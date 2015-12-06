@@ -1,23 +1,23 @@
 aria2 static builds for GNU/Linux & Windows
 ===========================================
 
-### aria2 1.19.2 builds2 (with OpenSSL):
+### aria2 1.19.3 builds (with OpenSSL):
 
   * **GNU/Linux downloads:**
-    * [aria2-1.19.2-linux-gnu-32bit-build2.tar.bz2](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.2_2/aria2-1.19.2-linux-gnu-32bit-build2.tar.bz2)
-    * [aria2-1.19.2-linux-gnu-64bit-build2.tar.bz2](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.2_2/aria2-1.19.2-linux-gnu-64bit-build2.tar.bz2)
+    * [aria2-1.19.3-linux-gnu-32bit-build1.tar.bz2](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.3/aria2-1.19.3-linux-gnu-32bit-build1.tar.bz2)
+    * [aria2-1.19.3-linux-gnu-64bit-build1.tar.bz2](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.3/aria2-1.19.3-linux-gnu-64bit-build1.tar.bz2)
 
   * **Windows downloads:**
-    * [aria2-1.19.2-win-32bit-build2.7z](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.2_2/aria2-1.19.2-win-32bit-build2.7z)
-    * [aria2-1.19.2-win-64bit-build2.7z](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.2_2/aria2-1.19.2-win-64bit-build2.7z)
+    * [aria2-1.19.3-win-32bit-build1.7z](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.3/aria2-1.19.3-win-32bit-build1.7z)
+    * [aria2-1.19.3-win-64bit-build1.7z](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.3/aria2-1.19.3-win-64bit-build1.7z)
     
   * **CA-Certificates:**
-    * [ca-certificates.crt](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.2_2/ca-certificates.crt)
+    * [ca-certificates.crt](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.19.3/ca-certificates.crt)
 
   * **Source code:**
-    * [aria2-1.19.2.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.19.2/aria2-1.19.2.tar.bz2)
-    * [aria2-1.19.2.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.19.2/aria2-1.19.2.tar.gz)
-    * [aria2-1.19.2.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.19.2/aria2-1.19.2.tar.xz)
+    * [aria2-1.19.3.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.19.3/aria2-1.19.3.tar.bz2)
+    * [aria2-1.19.3.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.19.3/aria2-1.19.3.tar.gz)
+    * [aria2-1.19.3.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.19.3/aria2-1.19.3.tar.xz)
 
 _Note: The error with bcrypt.dll library on Windows XP has been fixed._
 
@@ -25,7 +25,7 @@ _Note: The error with bcrypt.dll library on Windows XP has been fixed._
 
   * **GNU/Linux instructions:**
     * Open the terminal as root.
-    * Type the command: `tar jxvf aria2-1.19.2-linux-gnu-[arch]-build2.tar.bz2 -C /`
+    * Type the command: `tar jxvf aria2-1.19.3-linux-gnu-[arch]-build2.tar.bz2 -C /`
     * Finally, change the permissions: `chmod +x /usr/bin/aria2c`
 
   * **Windows instruccions:**
