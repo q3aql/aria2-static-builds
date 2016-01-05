@@ -60,6 +60,6 @@ Also, is possible disable the use of certificates with the following command:
 
 ### External links:
 
-  * [aria2 homepage](http://aria2.sourceforge.net/)
-  * [aria2 documentation](http://aria2.sourceforge.net/manual/en/html/index.html)
+  * [aria2 homepage](https://aria2.github.io/)
+  * [aria2 documentation](https://aria2.github.io/manual/en/html/)
   * [aria2 source code (Github)](https://github.com/tatsuhiro-t/aria2)
