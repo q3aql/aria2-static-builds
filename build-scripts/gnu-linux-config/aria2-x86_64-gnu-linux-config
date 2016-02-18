@@ -10,7 +10,7 @@
 # * libssh2
 
 #COMPILER AND PATH
-PREFIX=/opt/aria2
+PREFIX=/usr
 C_COMPILER="gcc"
 CXX_COMPILER="g++"
 

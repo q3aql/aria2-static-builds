@@ -11,7 +11,7 @@
 
 #IMPORTANT: Require install gcc-multilib g++-multilib libc6-dev-i386
 #COMPILER AND PATH
-PREFIX=/opt/aria2-i386
+PREFIX=/usr
 C_COMPILER="gcc"
 CXX_COMPILER="g++"
 
