@@ -63,7 +63,7 @@ export LDFLAGS="-m32"
   wget -c $OPENSSL
   tar zxvf openssl-1.0.2f.tar.gz
   cd openssl-1.0.2f/
-  CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./Configure --prefix=$PREFIX linux-elf
+  CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./Configure --prefix=$PREFIX linux-elf shared
   make
   make install
 #
@@ -72,7 +72,7 @@ export LDFLAGS="-m32"
   wget -c $SQLITE3
   tar zxvf sqlite-autoconf-3100200.tar.gz
   cd sqlite-autoconf-3100200/
-  CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --disable-shared
+  CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --enable-shared
   make
   make install
 #
@@ -84,30 +84,7 @@ export LDFLAGS="-m32"
   rm -rf $PREFIX/lib/pkgconfig/libssh2.pc
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --without-libgcrypt --with-openssl --without-wincng --prefix=$PREFIX --enable-static --disable-shared
   make
-  make install
-  if [ -f $PREFIX/lib/pkgconfig/libssh2.pc ] ; then
-     echo "$PREFIX/lib/pkgconfig/libssh2.pc"
-  else
-     echo "################################" > $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "# libssh2 installation details #" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "#################################" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "prefix=$PREFIX" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "exec_prefix=$PREFIX" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "libdir=$PREFIX/lib" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "includedir=$PREFIX/include" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Name: libssh2" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "URL: http://www.libssh2.org/" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Description: Library for SSH-based communication" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Version: 1.6.0" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Requires.private:" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Libs: -L$PREFIX/lib -lssh2 -m32 -lssl -lcrypto -lz" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Libs.private:  -m32 -lssl -lcrypto -lz" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "Cflags: -I$PREFIX/include" >> $PREFIX/lib/pkgconfig/libssh2.pc
-     echo "$PREFIX/lib/pkgconfig/libssh2.pc created!"
-     cp -rf include/*.h $PREFIX/include
-  fi   
+  make install  
 #
  #cleaning
   cd ..
