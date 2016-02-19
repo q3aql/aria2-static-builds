@@ -20,7 +20,7 @@ ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2f.tar.gz
 EXPAT=http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz
 SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz
-C_ARES=http://c-ares.haxx.se/download/c-ares-1.10.0.tar.gz
+C_ARES=http://c-ares.haxx.se/download/c-ares-1.11.0.tar.gz
 SSH2=http://www.libssh2.org/download/libssh2-1.6.0.tar.gz
 
 ## CONFIG ##
@@ -52,8 +52,8 @@ export LDFLAGS="-m32"
  # c-ares build
   cd ..
   wget -c $C_ARES
-  tar zxvf c-ares-1.10.0.tar.gz
-  cd c-ares-1.10.0/
+  tar zxvf c-ares-1.11.0.tar.gz
+  cd c-ares-1.11.0/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --disable-shared
   make
   make install
