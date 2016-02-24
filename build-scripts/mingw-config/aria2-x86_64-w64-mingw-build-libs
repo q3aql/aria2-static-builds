@@ -15,7 +15,7 @@ OPENSSL=http://www.openssl.org/source/openssl-1.0.2f.tar.gz
 EXPAT=http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz
 SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.11.0.tar.gz
-SSH2=http://www.libssh2.org/download/libssh2-1.6.0.tar.gz
+SSH2=http://www.libssh2.org/download/libssh2-1.7.0.tar.gz
 
 ## CONFIG ##
 BUILD_DIRECTORY=/tmp/
@@ -72,8 +72,8 @@ cd $BUILD_DIRECTORY
  # libssh2
   cd ..
   wget -c $SSH2
-  tar zxvf libssh2-1.6.0.tar.gz
-  cd libssh2-1.6.0/
+  tar zxvf libssh2-1.7.0.tar.gz
+  cd libssh2-1.7.0/
   rm -rf $PREFIX/lib/pkgconfig/libssh2.pc
   CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
   make
