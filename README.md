@@ -4,15 +4,15 @@ aria2 static builds for GNU/Linux & Windows
 ### aria2 1.20.0 builds2 (with OpenSSL):
 
   * **GNU/Linux downloads:**
-    * [aria2-1.20.0-linux-gnu-32bit-build2.tar.bz2](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-linux-gnu-32bit-build2.tar.bz2)
-    * [aria2-1.20.0-linux-gnu-64bit-build2.tar.bz2](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-linux-gnu-64bit-build2.tar.bz2)
+    * [aria2-1.20.0-linux-gnu-32bit-build2.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-linux-gnu-32bit-build2.tar.bz2)
+    * [aria2-1.20.0-linux-gnu-64bit-build2.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-linux-gnu-64bit-build2.tar.bz2)
 
   * **Windows downloads:**
-    * [aria2-1.20.0-win-32bit-build2.7z](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-win-32bit-build2.7z)
-    * [aria2-1.20.0-win-64bit-build2.7z](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-win-64bit-build2.7z)
+    * [aria2-1.20.0-win-32bit-build2.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-win-32bit-build2.7z)
+    * [aria2-1.20.0-win-64bit-build2.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.20.0_2/aria2-1.20.0-win-64bit-build2.7z)
     
   * **CA-Certificates:**
-    * [ca-certificates.crt](https://github.com/clamsawd/aria2-static-builds/releases/download/v1.20.0_2/ca-certificates.crt)
+    * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.20.0_2/ca-certificates.crt)
 
   * **Source code:**
     * [aria2-1.20.0.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.20.0/aria2-1.20.0.tar.bz2)
