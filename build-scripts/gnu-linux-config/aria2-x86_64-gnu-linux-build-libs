@@ -16,7 +16,7 @@ CXX_COMPILER="g++"
 
 ## DEPENDENCES ##
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
-OPENSSL=http://www.openssl.org/source/openssl-1.0.2f.tar.gz
+OPENSSL=http://www.openssl.org/source/openssl-1.0.2g.tar.gz
 EXPAT=http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz
 SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.11.0.tar.gz
@@ -57,8 +57,8 @@ cd $BUILD_DIRECTORY
  # Openssl build
   cd ..
   wget -c $OPENSSL
-  tar zxvf openssl-1.0.2f.tar.gz
-  cd openssl-1.0.2f/
+  tar zxvf openssl-1.0.2g.tar.gz
+  cd openssl-1.0.2g/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./Configure --prefix=$PREFIX linux-x86_64 shared
   make
   make install
