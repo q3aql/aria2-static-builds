@@ -38,7 +38,7 @@ cd $BUILD_DIRECTORY
   wget -c $EXPAT
   tar jxvf expat-2.1.1.tar.bz2
   cd expat-2.1.1/
-  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
+  CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --enable-shared
   make
   make install
 #
