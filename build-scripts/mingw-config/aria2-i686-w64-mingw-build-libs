@@ -15,9 +15,9 @@
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2g.tar.gz
 EXPAT=https://sourceforge.net/projects/expat/files/expat/2.1.1/expat-2.1.1.tar.bz2
-SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3120000.tar.gz
+SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3120200.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.11.0.tar.gz
-SSH2=http://www.libssh2.org/download/libssh2-1.7.0.tar.gz
+SSH2=https://www.libssh2.org/download/libssh2-1.7.0.tar.gz
 
 ## CONFIG ##
 BUILD_DIRECTORY=/tmp/
@@ -65,8 +65,8 @@ cd $BUILD_DIRECTORY
  # sqlite3
   cd ..
   wget -c $SQLITE3
-  tar zxvf sqlite-autoconf-3120000.tar.gz
-  cd sqlite-autoconf-3120000/
+  tar zxvf sqlite-autoconf-3120200.tar.gz
+  cd sqlite-autoconf-3120200/
   CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --enable-shared
   make
   make install
