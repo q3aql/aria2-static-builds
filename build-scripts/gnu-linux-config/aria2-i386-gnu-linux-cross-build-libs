@@ -22,7 +22,7 @@ OPENSSL=http://www.openssl.org/source/openssl-1.0.2g.tar.gz
 EXPAT=https://sourceforge.net/projects/expat/files/expat/2.1.1/expat-2.1.1.tar.bz2
 SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3120200.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.11.0.tar.gz
-SSH2=http://www.libssh2.org/download/libssh2-1.7.0.tar.gz
+SSH2=https://www.libssh2.org/download/libssh2-1.7.0.tar.gz
 
 ## CONFIG ##
 BUILD_DIRECTORY=/tmp/
