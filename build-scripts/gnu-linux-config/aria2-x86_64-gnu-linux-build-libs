@@ -14,6 +14,14 @@ PREFIX=/opt/aria2/build_libs
 C_COMPILER="gcc"
 CXX_COMPILER="g++"
 
+#CHECK TOOL FOR DOWNLOAD
+ aria2c --help > /dev/null
+ if [ "$?" -eq 0 ] ; then
+   DOWNLOADER="aria2c --check-certificate=false"
+ else
+   DOWNLOADER="wget -c"
+ fi
+
 ## DEPENDENCES ##
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2h.tar.gz
@@ -29,7 +37,7 @@ BUILD_DIRECTORY=/tmp/
 cd $BUILD_DIRECTORY
 #
  # zlib build
-  wget -c $ZLIB
+  $DOWNLOADER $ZLIB
   tar zxvf zlib-1.2.8.tar.gz
   cd zlib-1.2.8/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --static
@@ -38,7 +46,7 @@ cd $BUILD_DIRECTORY
 # 
  # expat build
   cd ..
-  wget -c $EXPAT
+  $DOWNLOADER $EXPAT
   tar jxvf expat-2.1.1.tar.bz2
   cd expat-2.1.1/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --enable-static --enable-shared
@@ -47,7 +55,7 @@ cd $BUILD_DIRECTORY
 #
  # c-ares build
   cd ..
-  wget -c $C_ARES
+  $DOWNLOADER $C_ARES
   tar zxvf c-ares-1.11.0.tar.gz
   cd c-ares-1.11.0/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --enable-static --disable-shared
@@ -56,7 +64,7 @@ cd $BUILD_DIRECTORY
 #
  # Openssl build
   cd ..
-  wget -c $OPENSSL
+  $DOWNLOADER $OPENSSL
   tar zxvf openssl-1.0.2h.tar.gz
   cd openssl-1.0.2h/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./Configure --prefix=$PREFIX linux-x86_64 shared
@@ -65,7 +73,7 @@ cd $BUILD_DIRECTORY
 #
  # sqlite3
   cd ..
-  wget -c $SQLITE3
+  $DOWNLOADER $SQLITE3
   tar zxvf sqlite-autoconf-3120200.tar.gz
   cd sqlite-autoconf-3120200/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --enable-static --enable-shared
@@ -74,7 +82,7 @@ cd $BUILD_DIRECTORY
 #
  # libssh2
   cd ..
-  wget -c $SSH2
+  $DOWNLOADER $SSH2
   tar zxvf libssh2-1.7.0.tar.gz
   cd libssh2-1.7.0/
   rm -rf $PREFIX/lib/pkgconfig/libssh2.pc
