@@ -9,6 +9,8 @@
 # * openSSL
 # * libssh2
 
+#IMPORTANT: Require install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64
+
 ## DEPENDENCES ##
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2g.tar.gz
