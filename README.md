@@ -63,4 +63,4 @@ Also, is possible disable the use of certificates with the following command:
 
   * [aria2 homepage](https://aria2.github.io/)
   * [aria2 documentation](https://aria2.github.io/manual/en/html/)
-  * [aria2 source code (Github)](https://github.com/tatsuhiro-t/aria2)
+  * [aria2 source code (Github)](https://github.com/aria2/aria2)
