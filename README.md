@@ -6,6 +6,7 @@ aria2 static builds for GNU/Linux & Windows
   * **GNU/Linux downloads:**
     * [aria2-1.25.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.25.0/aria2-1.25.0-linux-gnu-32bit-build1.tar.bz2)
     * [aria2-1.25.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.25.0/aria2-1.25.0-linux-gnu-64bit-build1.tar.bz2)
+    * [aria2-1.25.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.25.0/aria2-1.25.0-linux-gnu-arm-rbpi-build1.tar.bz2)
 
   * **Windows downloads:**
     * [aria2-1.25.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.25.0/aria2-1.25.0-win-32bit-build1.7z)
