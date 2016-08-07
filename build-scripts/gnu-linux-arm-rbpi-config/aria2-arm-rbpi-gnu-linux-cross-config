@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# In this configuration, the following dependent libraries are used:
+#
+# * zlib
+# * c-ares
+# * expat
+# * sqlite3
+# * openSSL
+# * libssh2
+
+## CONFIG ##
+ARCH="armhf"
+HOST="arm-linux-gnueabihf"
+PREFIX="/opt/aria2-arm-rbpi"
+LOCAL_DIR="/opt/aria2-arm-rbpi/build_libs"
+
+TOOL_BIN_DIR="/opt/aria2-arm-rbpi/tools/arm-bcm2708/gcc-linaro-$HOST-raspbian/bin"
+PATH=${TOOL_BIN_DIR}:$PATH
+
+CFLAGS="-march=armv7-a -mtune=cortex-a9"
+DEST="/opt/aria2-arm-rbpi/build_libs"
+CC=$HOST-gcc
+CXX=$HOST-g++
+LDFLAGS="-L$DEST/lib"
+CPPFLAGS="-I$DEST/include"
+CXXFLAGS=$CFLAGS
+MAKE="make -j`nproc`"
+CONFIGURE="./configure --prefix=${LOCAL_DIR} --host=$HOST"
+
+./configure \
+    --host=$HOST \
+    --build=`dpkg-architecture -qDEB_BUILD_GNU_TYPE` \
+    --prefix=$PREFIX \
+    --disable-nls \
+    --without-gnutls \
+    --with-openssl \
+    --without-libxml2 \
+    --with-libz --with-libz-prefix=${LOCAL_DIR} \
+    --with-libexpat --with-libexpat-prefix=${LOCAL_DIR} \
+    --with-slite3 --with-sqlite3-prefix=${LOCAL_DIR} \
+    --with-libcares --with-libcares-prefix=${LOCAL_DIR} \
+    LDFLAGS="-L$LOCAL_DIR/lib" \
+    PKG_CONFIG_PATH="$LOCAL_DIR/lib/pkgconfig" \
+    ARIA2_STATIC=yes
