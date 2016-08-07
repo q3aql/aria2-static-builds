@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#IMPORTANT: Require install make binutils autoconf automake autotools-dev 
+#           libtool pkg-config git curl dpkg-dev autopoint libcppunit-dev 
+#           libxml2-dev libgcrypt11-dev lzip wget unzip
+
+#COMPILER AND PATH
+PREFIX=/opt/aria2-i386/build_libs
+C_COMPILER="gcc"
+CXX_COMPILER="g++"
+
+#CHECK TOOL FOR DOWNLOAD
+ aria2c --help > /dev/null
+ if [ "$?" -eq 0 ] ; then
+   DOWNLOADER="aria2c --check-certificate=false -o tools-master.zip"
+ else
+   DOWNLOADER="wget -c -O tools-master.zip"
+ fi
+
+#BUILD TOOLS FOR RASPBERRY
+
+ mkdir -p /opt/aria2-arm-rbpi/tools
+ cd /tmp/
+ $DOWNLOADER https://codeload.github.com/raspberrypi/tools/zip/master
+ unzip tools-master.zip
+ mv tools-master/arm-bcm2708 /opt/aria2-arm-rbpi/tools
+ rm -rf tools-master
+ rm tools-master.zip
