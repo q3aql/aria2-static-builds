@@ -21,7 +21,7 @@
 
 ## DEPENDENCES ##
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
-OPENSSL=http://www.openssl.org/source/openssl-1.0.2h.tar.gz
+OPENSSL=http://www.openssl.org/source/openssl-1.0.2j.tar.gz
 EXPAT=https://sourceforge.net/projects/expat/files/expat/2.2.0/expat-2.2.0.tar.bz2
 SQLITE3=http://www.sqlite.org/2016/sqlite-autoconf-3140200.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.12.0.tar.gz
@@ -64,8 +64,8 @@ cd $BUILD_DIRECTORY
  # Openssl build
   cd ..
   $DOWNLOADER $OPENSSL
-  tar zxvf openssl-1.0.2h.tar.gz
-  cd openssl-1.0.2h/
+  tar zxvf openssl-1.0.2j.tar.gz
+  cd openssl-1.0.2j/
   ./Configure mingw64 --cross-compile-prefix=$HOST- --prefix=$PREFIX shared
   make
   make install
