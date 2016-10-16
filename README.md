@@ -1,24 +1,24 @@
 aria2 static builds for GNU/Linux & Windows
 ===========================================
 
-### aria2 1.27.1 builds (with OpenSSL):
+### aria2 1.28.0 builds (with OpenSSL):
 
   * **GNU/Linux downloads:**
-    * [aria2-1.27.1-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.27.1/aria2-1.27.1-linux-gnu-32bit-build1.tar.bz2)
-    * [aria2-1.27.1-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.27.1/aria2-1.27.1-linux-gnu-64bit-build1.tar.bz2)
-    * [aria2-1.27.1-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.27.1/aria2-1.27.1-linux-gnu-arm-rbpi-build1.tar.bz2)
+    * [aria2-1.28.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.28.0/aria2-1.28.0-linux-gnu-32bit-build1.tar.bz2)
+    * [aria2-1.28.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.28.0/aria2-1.28.0-linux-gnu-64bit-build1.tar.bz2)
+    * [aria2-1.28.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.28.0/aria2-1.28.0-linux-gnu-arm-rbpi-build1.tar.bz2)
 
   * **Windows downloads:**
-    * [aria2-1.27.1-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.27.1/aria2-1.27.1-win-32bit-build1.7z)
-    * [aria2-1.27.1-win-64bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.27.1/aria2-1.27.1-win-64bit-build1.7z)
-    
+    * [aria2-1.28.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.28.0/aria2-1.28.0-win-32bit-build1.7z)
+    * [aria2-1.28.0-win-64bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.28.0/aria2-1.28.0-win-64bit-build1.7z)
+
   * **CA-Certificates:**
-    * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.27.1/ca-certificates.crt)
+    * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.28.0/ca-certificates.crt)
 
   * **Source code:**
-    * [aria2-1.27.1.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.27.1/aria2-1.27.1.tar.bz2)
-    * [aria2-1.27.1.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.27.1/aria2-1.27.1.tar.gz)
-    * [aria2-1.27.1.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.27.1/aria2-1.27.1.tar.xz)
+    * [aria2-1.28.0.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.28.0/aria2-1.28.0.tar.bz2)
+    * [aria2-1.28.0.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.28.0/aria2-1.28.0.tar.gz)
+    * [aria2-1.28.0.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.28.0/aria2-1.28.0.tar.xz)
 
 _Note: The error with bcrypt.dll library on Windows XP has been fixed._
 
@@ -26,8 +26,8 @@ _Note: The error with bcrypt.dll library on Windows XP has been fixed._
 
   * **GNU/Linux instructions:**
     * Open the terminal.
-    * Type the command: `tar jxvf aria2-1.27.1-linux-gnu-[arch]-build1.tar.bz2`
-    * Change the directory: `cd aria2-1.27.1-linux-gnu-[arch]-build1`
+    * Type the command: `tar jxvf aria2-1.28.0-linux-gnu-[arch]-build1.tar.bz2`
+    * Change the directory: `cd aria2-1.28.0-linux-gnu-[arch]-build1`
     * Finally, install the static binary (as root): `make install`
 
   * **Windows instruccions:**
