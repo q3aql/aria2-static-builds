@@ -70,5 +70,5 @@ Also, is possible disable the use of certificates with the following command:
 Licence
 =======
 
-This program is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](LICENCE) as published by the Free Software Foundation;
+This program is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](LICENCE.md) as published by the Free Software Foundation;
 either version 2 of the License, or (at your option) any later version.
