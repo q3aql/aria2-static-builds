@@ -65,3 +65,10 @@ Also, is possible disable the use of certificates with the following command:
   * [aria2 homepage](https://aria2.github.io/)
   * [aria2 documentation](https://aria2.github.io/manual/en/html/)
   * [aria2 source code (Github)](https://github.com/aria2/aria2)
+
+  
+Licence
+=======
+
+This program is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](LICENCE) as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
