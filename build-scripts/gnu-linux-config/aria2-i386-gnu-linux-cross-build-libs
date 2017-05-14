@@ -25,7 +25,7 @@ CXX_COMPILER="g++"
  fi
 
 ## DEPENDENCES ##
-ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.8/zlib-1.2.8.tar.gz
+ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.11/zlib-1.2.11.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2j.tar.gz
 EXPAT=https://sourceforge.net/projects/expat/files/expat/2.2.0/expat-2.2.0.tar.bz2
 SQLITE3=http://www.sqlite.org/2017/sqlite-autoconf-3160200.tar.gz
@@ -43,8 +43,8 @@ export LDFLAGS="-m32"
 #
  # zlib build
   $DOWNLOADER $ZLIB
-  tar zxvf zlib-1.2.8.tar.gz
-  cd zlib-1.2.8/
+  tar zxvf zlib-1.2.11.tar.gz
+  cd zlib-1.2.11/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --static
   make
   make install
