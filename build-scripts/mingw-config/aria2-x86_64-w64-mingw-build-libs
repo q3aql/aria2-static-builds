@@ -74,7 +74,7 @@ cd $BUILD_DIRECTORY
   cd ..
   $DOWNLOADER $SQLITE3
   tar zxvf sqlite-autoconf-33000000.tar.gz
-  cd sqlite-autoconf-33000000/
+  cd sqlite-autoconf-3300000/
   CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --enable-shared
   make
   make install
