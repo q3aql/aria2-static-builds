@@ -21,7 +21,7 @@
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.11/zlib-1.2.11.tar.gz
 OPENSSL=http://www.openssl.org/source/openssl-1.0.2t.tar.gz
 EXPAT=https://github.com/libexpat/libexpat/releases/download/R_2_2_6/expat-2.2.6.tar.bz2
-SQLITE3=http://www.sqlite.org/2019/sqlite-autoconf-33000000.tar.gz
+SQLITE3=https://sqlite.org/2019/sqlite-autoconf-3300000.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.15.0.tar.gz
 SSH2=https://www.libssh2.org/download/libssh2-1.7.0.tar.gz
 
