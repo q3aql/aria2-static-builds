@@ -19,7 +19,7 @@
 
 ## DEPENDENCES ##
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.11/zlib-1.2.11.tar.gz
-OPENSSL=http://www.openssl.org/source/openssl-1.0.2o.tar.gz
+OPENSSL=http://www.openssl.org/source/openssl-1.0.2t.tar.gz
 EXPAT=https://sourceforge.net/projects/expat/files/expat/2.2.0/expat-2.2.0.tar.bz2
 SQLITE3=http://www.sqlite.org/2018/sqlite-autoconf-3230100.tar.gz
 C_ARES=http://c-ares.haxx.se/download/c-ares-1.14.0.tar.gz
@@ -77,8 +77,8 @@ cd $BUILD_DIRECTORY
  # Openssl build
   cd ..
   $DOWNLOADER $OPENSSL
-  tar zxvf openssl-1.0.2o.tar.gz
-  cd openssl-1.0.2o/
+  tar zxvf openssl-1.0.2t.tar.gz
+  cd openssl-1.0.2t/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC=$HOST-gcc CXX=$HOST-g++ ./Configure linux-armv4 $CFLAGS --prefix=$PREFIX shared zlib zlib-dynamic -D_GNU_SOURCE -D_BSD_SOURCE --with-zlib-lib=$LOCAL_DIR/lib --with-zlib-include=$LOCAL_DIR/include
   make CC=$CC
   make CC=$CC install INSTALLTOP=$DEST OPENSSLDIR=$DEST/ssl
