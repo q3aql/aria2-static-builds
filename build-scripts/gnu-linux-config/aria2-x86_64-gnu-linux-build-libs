@@ -74,7 +74,7 @@ cd $BUILD_DIRECTORY
  # sqlite3
   cd ..
   $DOWNLOADER $SQLITE3
-  tar zxvf sqlite-autoconf-33000000.tar.gz
+  tar zxvf sqlite-autoconf-3300000.tar.gz
   cd sqlite-autoconf-3300000/
   PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER" CXX="$CXX_COMPILER" ./configure --prefix=$PREFIX --enable-static --enable-shared
   make
