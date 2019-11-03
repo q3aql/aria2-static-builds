@@ -4,9 +4,17 @@ aria2 static builds for GNU/Linux & Windows
 ### aria2 1.35.0 builds (with OpenSSL):
 
   * **GNU/Linux downloads:**
-    * [aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2)
-    * [aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2)
-    * [aria2-1.35.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-arm-rbpi-build1.tar.bz2)
+    * Generic (All distros):
+    
+      * [aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2)
+      * [aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2)
+      * [aria2-1.35.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-arm-rbpi-build1.tar.bz2)
+     
+     * DEB (Debian Based):
+     
+       * [aria2-1.35.0-linux-gnu-32bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-32bit-build1.deb)
+       * [aria2-1.35.0-linux-gnu-64bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.deb)
+       * [aria2-1.35.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-arm-rbpi-build1.deb)
 
   * **Windows downloads:**
     * [aria2-1.35.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-win-32bit-build1.7z)
