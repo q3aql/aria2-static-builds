@@ -21,10 +21,10 @@
 
 ## DEPENDENCES ##
 ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.11/zlib-1.2.11.tar.gz
-OPENSSL=http://www.openssl.org/source/openssl-1.0.2t.tar.gz
-EXPAT=https://github.com/libexpat/libexpat/releases/download/R_2_2_6/expat-2.2.6.tar.bz2
-SQLITE3=https://sqlite.org/2019/sqlite-autoconf-3300000.tar.gz
-C_ARES=http://c-ares.haxx.se/download/c-ares-1.15.0.tar.gz
+OPENSSL=http://www.openssl.org/source/openssl-1.0.2u.tar.gz
+EXPAT=https://github.com/libexpat/libexpat/releases/download/R_2_2_10/expat-2.2.10.tar.bz2
+SQLITE3=https://sqlite.org/2020/sqlite-autoconf-3330000.tar.gz
+C_ARES=https://c-ares.haxx.se/download/c-ares-1.16.1.tar.gz
 SSH2=https://www.libssh2.org/download/libssh2-1.7.0.tar.gz
 
 ## CONFIG ##
@@ -46,8 +46,8 @@ cd $BUILD_DIRECTORY
  # expat build
   cd ..
   $DOWNLOADER $EXPAT
-  tar jxvf expat-2.2.6.tar.bz2
-  cd expat-2.2.6/
+  tar jxvf expat-2.2.10.tar.bz2
+  cd expat-2.2.10/
   CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --enable-shared
   make
   make install
@@ -55,8 +55,8 @@ cd $BUILD_DIRECTORY
  # c-ares build
   cd ..
   $DOWNLOADER $C_ARES
-  tar zxvf c-ares-1.15.0.tar.gz
-  cd c-ares-1.15.0/
+  tar zxvf c-ares-1.16.1.tar.gz
+  cd c-ares-1.16.1/
   CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --disable-shared
   make
   make install
@@ -64,8 +64,8 @@ cd $BUILD_DIRECTORY
  # Openssl build
   cd ..
   $DOWNLOADER $OPENSSL
-  tar zxvf openssl-1.0.2t.tar.gz
-  cd openssl-1.0.2t/
+  tar zxvf openssl-1.0.2u.tar.gz
+  cd openssl-1.0.2u/
   ./Configure mingw --cross-compile-prefix=$HOST- --prefix=$PREFIX shared
   make
   make install
@@ -73,8 +73,8 @@ cd $BUILD_DIRECTORY
  # sqlite3
   cd ..
   $DOWNLOADER $SQLITE3
-  tar zxvf sqlite-autoconf-3300000.tar.gz
-  cd sqlite-autoconf-3300000/
+  tar zxvf sqlite-autoconf-3330000.tar.gz
+  cd sqlite-autoconf-3330000/
   CC=$HOST-gcc CXX=$HOST-g++ AR=$HOST-ar RANLIB=$HOST-ranlib ./configure --prefix=$PREFIX --host=$HOST --enable-static --enable-shared
   make
   make install
