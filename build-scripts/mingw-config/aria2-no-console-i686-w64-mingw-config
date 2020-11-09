@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# In this configuration, the following dependent libraries are used:
+#
+# * zlib
+# * c-ares
+# * expat
+# * sqlite3
+# * openSSL
+# * libssh2
+
+# With this config it's possible to run aria2c.exe without console window,
+# Source: https://wangjie.rocks/2017/02/17/run-aria2c-without-console-window/
+
+HOST=i686-w64-mingw32
+PREFIX=/usr/i686-w64-mingw32
+
+export CXXFLAGS="-g -O2 -mwindows"
+
+./configure \
+    --host=$HOST \
+    --prefix=$PREFIX \
+    --without-included-gettext \
+    --disable-nls \
+    --with-libcares \
+    --without-gnutls \
+    --without-wintls \
+    --with-openssl \
+    --with-sqlite3 \
+    --without-libxml2 \
+    --with-libexpat \
+    --with-libz \
+    --without-libgmp \
+    --with-libssh2 \
+    --without-libgcrypt \
+    --without-libnettle \
+    --with-cppunit-prefix=$PREFIX \
+    ARIA2_STATIC=yes \
+    CPPFLAGS="-I$PREFIX/include" \
+    LDFLAGS="-L$PREFIX/lib" \
+    PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig"
