@@ -12,10 +12,10 @@
 # With this config it's possible to run aria2c.exe without console window,
 # Source: https://wangjie.rocks/2017/02/17/run-aria2c-without-console-window/
 
+export CXXFLAGS="-g -O2 -mwindows"
+
 HOST=i686-w64-mingw32
 PREFIX=/usr/i686-w64-mingw32
-
-export CXXFLAGS="-g -O2 -mwindows"
 
 ./configure \
     --host=$HOST \
