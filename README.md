@@ -37,11 +37,11 @@ _Note: The error with `bcrypt.dll` library on `Windows XP` has been fixed._
   
     * Open the terminal and type the following commands:
     
-    ```shell
-    $ tar jxvf aria2-1.35.0-linux-gnu-[arch]-build1.tar.bz2
-    $ cd aria2-1.35.0-linux-gnu-[arch]-build1
-    $ sudo make install
-    ````
+      ```shell
+      $ tar jxvf aria2-1.35.0-linux-gnu-[arch]-build1.tar.bz2
+      $ cd aria2-1.35.0-linux-gnu-[arch]-build1
+      $ sudo make install
+      ````
 
   * **Windows instructions:**
   
