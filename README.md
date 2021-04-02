@@ -1,9 +1,10 @@
-aria2 static builds for GNU/Linux & Windows
-===========================================
+aria2 static builds for GNU/Linux & Windows.
+============================================
 
 ### aria2 1.35.0 builds (with OpenSSL):
 
-  * **GNU/Linux downloads:**
+  * **`GNU/Linux downloads:`**
+  
     * Generic (All distros):
     
       * [aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2)
@@ -16,32 +17,36 @@ aria2 static builds for GNU/Linux & Windows
        * [aria2-1.35.0-linux-gnu-64bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.deb)
        * [aria2-1.35.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-arm-rbpi-build1.deb)
 
-  * **Windows downloads:**
+  * **`Windows downloads:`**
     * [aria2-1.35.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-win-32bit-build1.7z)
     * [aria2-1.35.0-win-64bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-win-64bit-build1.7z)
 
-  * **CA-Certificates:**
+  * **`CA-Certificates:`**
     * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/ca-certificates.crt)
 
-  * **Source code:**
+  * **`Source code:`**
     * [aria2-1.35.0.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.bz2)
     * [aria2-1.35.0.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz)
     * [aria2-1.35.0.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz)
 
-_Note: The error with bcrypt.dll library on Windows XP has been fixed._
+_Note: The error with `bcrypt.dll` library on `Windows XP` has been fixed._
 
 ### How to install:
 
   * **GNU/Linux instructions:**
-    * Open the terminal.
-    * Type the command: `tar jxvf aria2-1.35.0-linux-gnu-[arch]-build1.tar.bz2`
-    * Change the directory: `cd aria2-1.35.0-linux-gnu-[arch]-build1`
-    * Finally, install the static binary (as root): `make install`
+  
+    * Open the terminal and type the following commands:
+    ```shell
+    $ tar jxvf aria2-1.35.0-linux-gnu-[arch]-build1.tar.bz2
+    $ cd aria2-1.35.0-linux-gnu-[arch]-build1
+    $ sudo make install
+    ````
 
-  * **Windows instruccions:**
+  * **Windows instructions:**
+  
     * Unzip the package with [7-zip](http://www.7-zip.org/) or [Winrar](http://www.rarlab.com/).
     * Copy the files to a folder. For example: `C:\Program Files\aria2`
-    * Add the folder to [PATH](https://www.google.es/search?q=add+folder+to+PATH+on+Windows) variable
+    * Add the folder to [PATH](https://www.google.es/search?q=add+folder+to+PATH+on+Windows) variable.
 
 ### CA Certificates on Windows (HTTPS):
 
@@ -49,15 +54,21 @@ To perform downloads using **HTTPS**, is necessary the ca-certificates. For defa
 
 You can define the path of the certificates permanently using `aria2.conf` located on `C:\Users\<user>\.aria2\`. If you use Windows XP, the file is located on `C:\Documents and settings\<user>\.aria2\`. For example, you just have to add the following line:
 
-`ca-certificate=C:\Program Files\aria2\certs\ca-certificates.crt`
+```shell
+ca-certificate=C:\Program Files\aria2\certs\ca-certificates.crt
+```
 
 If you prefer load the certificates manually, you can use the following command:
 
-`C:\PATH\> aria2c --ca-certificate=<PATH-TO-CERTIFICATE> <URL>`
+```shell
+C:\PATH\> aria2c --ca-certificate=<PATH-TO-CERTIFICATE> <URL>
+```
 
 Also, is possible disable the use of certificates with the following command:
 
-`C:\PATH\> aria2c --check-certificate=false <URL>`
+```shell
+C:\PATH\> aria2c --check-certificate=false <URL>
+```
 
 ### Used external libraries:
 
