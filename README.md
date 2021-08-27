@@ -1,33 +1,33 @@
 aria2 static builds for GNU/Linux & Windows.
 ============================================
 
-### aria2 1.35.0 builds (with OpenSSL):
+### aria2 1.36.0 builds (with OpenSSL):
 
   * **`GNU/Linux downloads:`**
   
     * Generic (All distros):
     
-      * [aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-32bit-build1.tar.bz2)
-      * [aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.tar.bz2)
-      * [aria2-1.35.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-arm-rbpi-build1.tar.bz2)
+      * [aria2-1.36.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.tar.bz2)
+      * [aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2)
+      * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.tar.bz2)
      
      * DEB (Debian Based):
      
-       * [aria2-1.35.0-linux-gnu-32bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-32bit-build1.deb)
-       * [aria2-1.35.0-linux-gnu-64bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-64bit-build1.deb)
-       * [aria2-1.35.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-linux-gnu-arm-rbpi-build1.deb)
+       * [aria2-1.36.0-linux-gnu-32bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.deb)
+       * [aria2-1.36.0-linux-gnu-64bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.deb)
+       * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb)
 
   * **`Windows downloads:`**
-    * [aria2-1.35.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-win-32bit-build1.7z)
-    * [aria2-1.35.0-win-64bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/aria2-1.35.0-win-64bit-build1.7z)
+    * [aria2-1.36.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-32bit-build1.7z)
+    * [aria2-1.36.0-win-64bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-64bit-build1.7z)
 
   * **`CA-Certificates:`**
-    * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.35.0/ca-certificates.crt)
+    * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/ca-certificates.crt)
 
   * **`Source code:`**
-    * [aria2-1.35.0.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.bz2)
-    * [aria2-1.35.0.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz)
-    * [aria2-1.35.0.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz)
+    * [aria2-1.36.0.tar.bz2](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.bz2)
+    * [aria2-1.36.0.tar.gz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.gz)
+    * [aria2-1.36.0.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz)
 
 _Note: The error with `bcrypt.dll` library on `Windows XP` has been fixed._
 
@@ -38,8 +38,8 @@ _Note: The error with `bcrypt.dll` library on `Windows XP` has been fixed._
     * Open the terminal and type the following commands:
     
       ```shell
-      $ tar jxvf aria2-1.35.0-linux-gnu-[arch]-build1.tar.bz2
-      $ cd aria2-1.35.0-linux-gnu-[arch]-build1
+      $ tar jxvf aria2-1.36.0-linux-gnu-[arch]-build1.tar.bz2
+      $ cd aria2-1.36.0-linux-gnu-[arch]-build1
       $ sudo make install
       ````
 
