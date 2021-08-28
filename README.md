@@ -18,8 +18,8 @@ aria2 static builds for GNU/Linux & Windows.
        * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb)
 
   * **`Windows downloads:`**
-    * [aria2-1.36.0-win-32bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-32bit-build1.7z)
-    * [aria2-1.36.0-win-64bit-build1.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-64bit-build1.7z)
+    * [aria2-1.36.0-win-32bit-build2.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-32bit-build2.7z)
+    * [aria2-1.36.0-win-64bit-build2.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-64bit-build2.7z)
 
   * **`CA-Certificates:`**
     * [ca-certificates.crt](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/ca-certificates.crt)
@@ -30,6 +30,7 @@ aria2 static builds for GNU/Linux & Windows.
     * [aria2-1.36.0.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz)
 
 _Note: The error with `bcrypt.dll` library on `Windows XP` has been fixed._
+_Info: In this version, the Windows builds include manifest for Windows 10 (Contributed by [eladkarako](https://github.com/eladkarako))_
 
 ### How to install:
 
