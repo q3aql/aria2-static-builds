@@ -30,6 +30,7 @@ aria2 static builds for GNU/Linux & Windows.
     * [aria2-1.36.0.tar.xz](https://github.com/tatsuhiro-t/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz)
 
 _Note: The error with `bcrypt.dll` library on `Windows XP` has been fixed._
+
 _Info: In this version, the Windows builds include manifest for Windows 10 (Contributed by [eladkarako](https://github.com/eladkarako))_
 
 ### How to install:
