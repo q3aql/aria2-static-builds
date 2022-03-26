@@ -4,18 +4,15 @@ aria2 static builds for GNU/Linux & Windows.
 ### aria2 1.36.0 builds (with OpenSSL):
 
   * **`GNU/Linux downloads:`**
-  
-    * Generic (All distros):
-    
-      * [aria2-1.36.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.tar.bz2)
-      * [aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2)
-      * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.tar.bz2)
-     
-     * DEB (Debian Based):
-     
-       * [aria2-1.36.0-linux-gnu-32bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.deb)
-       * [aria2-1.36.0-linux-gnu-64bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.deb)
-       * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb)
+    * [aria2-1.36.0-linux-gnu-32bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.tar.bz2) (Generic Linux x86)
+    * [aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.tar.bz2) (Generic Linux x86_64)
+    * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.tar.bz2](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.tar.bz2) (Generic Linux ARM32)
+    * [aria2-1.36.0-linux-gnu-32bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.deb) (Debian/Ubuntu x86)
+    * [aria2-1.36.0-linux-gnu-64bit-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.deb) (Debian/Ubuntu x86_64)
+    * [aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-arm-rbpi-build1.deb) (Debian/Ubuntu ARM32)
+    * [aria2-1.36.0-linux-gnu-32bit-build1.rpm](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-32bit-build1.rpm) (RedHat/Fedora x86)
+    * [aria2-1.36.0-linux-gnu-64bit-build1.rpm](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.rpm) (RedHat/Fedora x86_64)
+    * [aria2-1.36.0-linux-gnu-64bit-build1.pkg.tar.zst](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-linux-gnu-64bit-build1.pkg.tar.zst) (Arch x86_64)
 
   * **`Windows downloads:`**
     * [aria2-1.36.0-win-32bit-build2.7z](https://github.com/q3aql/aria2-static-builds/releases/download/v1.36.0/aria2-1.36.0-win-32bit-build2.7z)
