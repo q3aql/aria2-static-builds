@@ -17,7 +17,6 @@ PREFIX=/usr/x86_64-w64-mingw32
     --prefix=$PREFIX \
     --without-included-gettext \
     --disable-nls \
-    --with-libcares \
     --without-gnutls \
     --without-wintls \
     --with-openssl \

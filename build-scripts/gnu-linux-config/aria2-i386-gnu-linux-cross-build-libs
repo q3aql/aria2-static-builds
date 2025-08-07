@@ -25,12 +25,12 @@ CXX_COMPILER="g++"
  fi
 
 ## DEPENDENCES ##
-ZLIB=http://sourceforge.net/projects/libpng/files/zlib/1.2.11/zlib-1.2.11.tar.gz
-OPENSSL=https://www.openssl.org/source/openssl-1.1.1l.tar.gz
-EXPAT=https://github.com/libexpat/libexpat/releases/download/R_2_4_1/expat-2.4.1.tar.bz2
-SQLITE3=https://sqlite.org/2021/sqlite-autoconf-3360000.tar.gz
-C_ARES=https://c-ares.haxx.se/download/c-ares-1.17.2.tar.gz
-SSH2=https://www.libssh2.org/download/libssh2-1.9.0.tar.gz
+ZLIB=https://www.zlib.net/zlib-1.3.tar.gz
+OPENSSL=https://www.openssl.org/source/openssl-1.1.1w.tar.gz
+EXPAT=https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.bz2
+SQLITE3=https://www.sqlite.org/2023/sqlite-autoconf-3440200.tar.gz
+C_ARES=https://c-ares.org/download/c-ares-1.24.0.tar.gz
+SSH2=https://libssh2.org/download/libssh2-1.11.0.tar.gz
 
 ## CONFIG ##
 BUILD_DIRECTORY=/tmp/
@@ -43,8 +43,8 @@ export LDFLAGS="-m32"
 #
  # zlib build
   $DOWNLOADER $ZLIB
-  tar zxvf zlib-1.2.11.tar.gz
-  cd zlib-1.2.11/
+  tar zxvf zlib-1.3.tar.gz
+  cd zlib-1.3/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --static
   make
   make install
@@ -52,8 +52,8 @@ export LDFLAGS="-m32"
  # expat build
   cd ..
   $DOWNLOADER $EXPAT
-  tar jxvf expat-2.4.1.tar.bz2
-  cd expat-2.4.1/
+  tar jxvf expat-2.5.0.tar.bz2
+  cd expat-2.5.0/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --enable-shared
   make
   make install
@@ -61,17 +61,17 @@ export LDFLAGS="-m32"
  # c-ares build
   cd ..
   $DOWNLOADER $C_ARES
-  tar zxvf c-ares-1.17.2.tar.gz
-  cd c-ares-1.17.2/
-  CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --disable-shared
+  tar zxvf c-ares-1.24.0.tar.gz
+  cd c-ares-1.24.0/
+  CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --disable-tests --enable-static --disable-shared
   make
   make install
 #
  # Openssl build
   cd ..
   $DOWNLOADER $OPENSSL
-  tar zxvf openssl-1.1.1l.tar.gz
-  cd openssl-1.1.1l/
+  tar zxvf openssl-1.1.1w.tar.gz
+  cd openssl-1.1.1w/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./Configure --prefix=$PREFIX linux-elf shared
   make
   make install
@@ -79,8 +79,8 @@ export LDFLAGS="-m32"
  # sqlite3
   cd ..
   $DOWNLOADER $SQLITE3
-  tar zxvf sqlite-autoconf-3360000.tar.gz
-  cd sqlite-autoconf-3360000/
+  tar zxvf sqlite-autoconf-3440200.tar.gz
+  cd sqlite-autoconf-3440200/
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --prefix=$PREFIX --enable-static --enable-shared
   make
   make install
@@ -88,8 +88,8 @@ export LDFLAGS="-m32"
  # libssh2
   cd ..
   $DOWNLOADER $SSH2
-  tar zxvf libssh2-1.9.0.tar.gz
-  cd libssh2-1.9.0/
+  tar zxvf libssh2-1.11.0.tar.gz
+  cd libssh2-1.11.0/
   rm -rf $PREFIX/lib/pkgconfig/libssh2.pc
   CFLAGS="-m32" CXXFLAGS="-m32" LDFLAGS="-m32" PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig/ LD_LIBRARY_PATH=$PREFIX/lib/ CC="$C_COMPILER -m32" CXX="$CXX_COMPILER -m32" ./configure --without-libgcrypt --with-openssl --without-wincng --prefix=$PREFIX --enable-static --disable-shared
   make
